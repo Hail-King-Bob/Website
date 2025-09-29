@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Secret</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    .secret-btn {
+      background: red;
+      border: none;
+      border-radius: 20px;
+      padding: 20px 60px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #a00;
+      transition: all 0.15s ease;
+    }
+
+    .secret-btn:active {
+      transform: translateY(6px);
+      box-shadow: 0 2px 0 #a00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click to Discover</h1>
+  <button class="secret-btn" onclick="reveal()">Top Secret</button>
+
+  <script>
+    function reveal() {
+      // Small delay to let the button animation play
+      setTimeout(() => {
+        window.location.href = "secret.html";
+      }, 200);
+    }
+  </script>
+</body>
+</html>
