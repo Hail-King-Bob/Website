@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mwahaha</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 60px;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 60px; /* space between buttons */
+    }
+
+    .secret-btn {
+      background: red;
+      border: none;
+      border-radius: 20px;
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #a00;
+      transition: all 0.15s ease;
+    }
+
+    .secret-btn:active {
+      transform: translateY(6px);
+      box-shadow: 0 2px 0 #a00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mwahaha, you have brought this upon yourself</h1>
+  <div class="button-row">
+    <button class="secret-btn" onclick="revealLeft()">Why did you click</button>
+    <button class="secret-btn" onclick="revealRight()">Click one of us and find out</button>
+  </div>
+
+  <script>
+    function revealLeft() {
+      setTimeout(() => {
+        window.location.href = "left.html"; // page if left is clicked
+      }, 200);
+    }
+
+    function revealRight() {
+      setTimeout(() => {
+        window.location.href = "right.html"; // page if right is clicked
+      }, 200);
+    }
+  </script>
+</body>
+</html>
