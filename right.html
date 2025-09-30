@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>One will destroy the world...</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 60px;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .secret-btn {
+      background: red;
+      border: none;
+      border-radius: 20px;
+      padding: 20px 40px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #a00;
+      transition: all 0.15s ease;
+      min-width: 220px;
+      text-align: center;
+    }
+
+    .secret-btn:active {
+      transform: translateY(6px);
+      box-shadow: 0 2px 0 #a00;
+    }
+
+    @media (max-width: 560px) {
+      .button-row { flex-direction: column; gap: 20px; }
+      .secret-btn { min-width: 200px; padding: 16px 20px; font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>One will destroy the world, the other...</h1>
+
+  <div class="button-row">
+    <button class="secret-btn" onclick="leftAction()">Don't Click Me! I'm the fake!</button>
+    <button class="secret-btn" onclick="rightAction()">He's lying! I'm the decoy!</button>
+  </div>
+
+  <script>
+    // Left button → Rickroll
+    const LEFT_URL = "https://youtu.be/dQw4w9WgXcQ?si=Bz3-Q5wAxLI01-ZE";
+    // Right button → Your first video
+    const RIGHT_URL = "https://youtu.be/mVNA-fUb9gg?si=SpfTRFpooAPC8hYj";
+
+    function leftAction() {
+      setTimeout(() => {
+        window.location.href = LEFT_URL;
+      }, 200);
+    }
+
+    function rightAction() {
+      setTimeout(() => {
+        window.location.href = RIGHT_URL;
+      }, 200);
+    }
+  </script>
+</body>
+</html>
