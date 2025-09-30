@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decoy Trap</title>
+  <style>
+    body {
+      background: black;
+      color: red;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .trap-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: #222;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border-radius: 5px;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .trap-btn:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  Hahahaha, Loser! YOU FELL FOR THE DECOY! NOW YOU'RE TRAPPED! WITH ME! SUCK IT! HAHAHA
+
+  <button class="trap-btn" onclick="refreshTrap()">Escape</button>
+
+  <script>
+    function refreshTrap() {
+      location.reload(); // reloads same page, keeps them stuck
+    }
+  </script>
+</body>
+</html>
